@@ -19,13 +19,15 @@ duplicates = []  # Return the list of duplicates in this data structure
 #             duplicates.append(name_1)
 
 BST = BinarySearchTree('names')
-
+# BST INSERT
 for names_one in names_1:
     BST.insert(names_one)
-
+#BST CONTAINS
 for names_two in names_2:
     if BST.contains(names_two):
         duplicates.append(names_two)
+
+#this is o(n) since this is linear and depends solely on the fact of however many names are inserted 
 
 end_time = time.time()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
